@@ -15,7 +15,6 @@ abstract class BaseRepository {
             emit(
                 Resource.Error(
                     ioException
-                        .localizedMessage ?: "Unknown error "))
-        }
+                        .localizedMessage ?: "Unknown error "))}
     }.flowOn(Dispatchers.IO)
 }

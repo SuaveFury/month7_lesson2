@@ -2,4 +2,13 @@
     <string name="app_name">month7_lesson2</string>
     <string name="title">title</string>
     <string name="description">description</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="enter_description">Enter your description</string>
+    <string name="edit">Edit</string>
+    <string name="full">Error, fill it full</string>
+    <string name="delete">Are you sure you wanna delete?</string>
+    <string name="yes">Yes</string>
+    <string name="send">Send</string>
+    <string name="enter_title">Enter your title</string>
+    <string name="no">No</string>
 </resources>

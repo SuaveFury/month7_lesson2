@@ -16,12 +16,12 @@ import javax.inject.Singleton
 @Module
 @InstallIn(SingletonComponent::class)
 object NoteAppModule {
+    @Provides
     @Singleton
+    fun provideRoomNoteDataBase(@ApplicationContext context: Context):NoteDataBase =
+        Room.databaseBuilder(context, NoteDataBase::class.java,"notes").build()
     @Provides
-    fun provideRoomNoteDataBase(@ApplicationContext context: Context) = Room.databaseBuilder(
-        context, NoteDataBase::class.java, "notes")
-    @Provides
-    fun provideNoteDao(noteDataBase: NoteDataBase) = noteDataBase.noteDataBase()
+    fun provideNoteDao(noteDataBase: NoteDataBase) = noteDataBase.doNoteDao()
     @Provides
     fun provideNOteRepository(noteDao: NoteDao): NoteRepository = NoteRepositoryImpl(noteDao)
 }
