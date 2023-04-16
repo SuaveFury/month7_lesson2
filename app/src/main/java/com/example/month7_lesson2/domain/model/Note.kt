@@ -1,6 +1,6 @@
 package com.example.month7_lesson2.domain.model
 
-class NOte(
+class Note(
     var id: Int? =null,
     var title: String?=null,
     var desc: String?=null
